@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>One scroll</title>
+	<link href="stylesheets/app.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+  <script type="text/javascript" src="javascripts/jquery.onepage-scroll.js"
+		  ></script>
+  <link href="stylesheets/onepage-scroll.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+	<script>
+	  $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 0,
+        loop: true
+      });
+		});
+
+	</script>
+</head>
+<body>
+  <div class="wrapper">
+	  <div class="main">
+
+      <section class="page1">
+        <div class="page_container">
+          <h1>Roomie</h1>
+          <h2>Get karma points by completing tasks around the house</h2>
+          <p class="credit">Created by <a href="http://www.dylanbourgeois.com">Dylan B.</a></p>
+          <div class="btns">
+  	        <a class="reload btn" href="">Get from App Store</a>
+  	      </div>
+  	    </div>
+		  <img src="images/yoda.svg">
+      </section>
+
+	    <section class="page2">
+	      <div class="page_container">
+			<h1> Screenshots </h1>
+			<div class="imagecontainer">
+				<img src="images/flat_mockup_5s1.png" id="flatMockup">
+			</div>
+		  </div>
+      </section>
+
+	    <section class="page3">
+			<div class="page_container">
+				<h1> Support </h1>
+				<img src="images/icon-ios7-email.svg">
+
+			<h2> Share the love.</h2>
+			</div>
+      </section>
+    </div>
+  </div>
+	<script>
+		var ctr = 0;
+	setInterval(function() {
+    	var myImageElement = document.getElementById('flatMockup');
+
+		if(ctr%3 == 0) {
+    		myImageElement.src = 'images/flat_mockup_5s1.png';
+		}
+		else if(ctr%3 == 1){
+			myImageElement.src = 'images/flat_mockup_5s2.png';
+		}
+		else if (ctr%3 == 2){
+			myImageElement.src = 'images/flat_mockup_5s3.png';
+		}
+		ctr++;
+	}, 8000);
+	</script>
+
+</body>
+</html>
